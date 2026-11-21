@@ -8,7 +8,7 @@ Fallstudie zur Übung. Standort Bonn, Teil eines Franchise-Netzes, vor allem B2B
 
 Anfragen kommen über Website-Formular, E-Mail, Telefon oder WhatsApp und Instagram, etwa 20 pro Monat (Annahme, Spanne 10 bis 30). Etwa 30 Prozent der Kunden buchen erneut (Annahme, Spanne 20 bis 40).
 
-Jede Anfrage wird am selben Tag beantwortet, aber nirgends zentral erfasst. Nachfassen und Wiederbuchung hängen deshalb vom Gedächtnis ab. Das ist das eigentliche Problem. Auf Netzwerkebene fehlen zudem gemeinsame Daten.
+Jede Anfrage wird am selben Tag beantwortet. An einer Stelle landen aber nur Formularanfragen. E-Mail, Telefon, WhatsApp und Instagram werden nicht zentral erfasst. Nachfassen und Wiederbuchung hängen deshalb vom Gedächtnis ab. Das ist das eigentliche Problem. Auf Netzwerkebene fehlen zudem gemeinsame Daten.
 
 Ziele:
 
@@ -23,8 +23,6 @@ Ziele:
 4. Opportunity: die geprüfte Anfrage mit Angebot und Status.
 5. Buchung: der bestätigte Auftrag mit Datum, Leistung und Standort.
 6. Ticket: Feedback oder Beschwerde nach dem Event.
-
-Ein Account hat mehrere Kontakte. Ein Lead wird zur Opportunity, eine gewonnene Opportunity zur Buchung. Tickets hängen an der Buchung.
 
 ### Prozess
 
@@ -76,10 +74,10 @@ Ein Account hat mehrere Kontakte. Ein Lead wird zur Opportunity, eine gewonnene 
 ### Systemauswahl
 
 1. HubSpot: leichtes CRM, schnell eingerichtet. Reicht für einen Einzelbetrieb.
-2. Salesforce, Microsoft Dynamics 365: große Plattformen, Optionen für das Netz.
+2. Salesforce, Microsoft Dynamics 365: große Plattformen, Optionen für das Netz. US-Anbieter, schwächer bei der Datensouveränität. Dynamics passt vor allem in Microsoft-Umgebungen.
 3. BSI: europäischer Anbieter mit starker Datensouveränität, stark in regulierten Branchen, Low-Code-Konfiguration, eine Plattform mit eigener Sicht pro Standort.
 
-BSI gewinnt hier. Als Enterprise-Software lohnen sich die Lizenzkosten aber erst über viele Standorte.
+Für dieses Netz spricht am meisten für BSI. Als Enterprise-Software lohnen sich die Lizenzkosten aber erst über viele Standorte.
 
 Für einen Einzelbetrieb wäre BSI zu groß. Für ein Franchise-Netz mit vielen Standorten passt es.
 
@@ -96,7 +94,7 @@ Das Formular schickt Anfragen per REST ans CRM, dort entsteht ein Lead. E-Mails 
 ### Risiken
 
 1. Das Team erfasst Telefon und WhatsApp nicht. Gegenmaßnahme: Eingabemaske mit fünf Pflichtfeldern.
-2. Mails nach dem Event verletzen den Datenschutz. Gegenmaßnahme: Einwilligung im Formular, Abmeldelink in jeder Mail.
+2. Mails nach dem Event verletzen den Datenschutz. Gegenmaßnahme: Einwilligung im Formular, Abmeldelink in jeder Mail, vorher rechtlich prüfen lassen.
 3. Standorte pflegen Daten unterschiedlich. Gegenmaßnahme: einheitliche Pflichtfelder und Vorlagen der Zentrale.
 
 Übungskonzept. Kein produktives BSI-System. Zahlen sind Annahmen.
