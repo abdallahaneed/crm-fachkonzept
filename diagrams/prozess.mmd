@@ -1,0 +1,13 @@
+flowchart TD
+  A[Anfrage] ==>|per Formular automatisch,<br/>sonst über Eingabemaske| B[Lead]
+  B ==> C[Dubletten prüfen,<br/>Kontakt und Account zuordnen]
+  C ==> D{Passen Datum, Ort<br/>und Gästezahl?}
+  D ==>|Ja| E[Opportunity]
+  D ==>|Nein| J([Absage, Grund erfasst])
+  E ==> F[Angebot am selben Tag]
+  F ==> G{Antwort nach<br/>drei Tagen?}
+  G ==>|Nein| H[Nachfass-Aufgabe]
+  H ==> K
+  G ==>|Ja| K{Zusage?}
+  K ==>|Ja| I([Buchung])
+  K ==>|Nein| J

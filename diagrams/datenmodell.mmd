@@ -1,0 +1,38 @@
+erDiagram
+  Account only one to one or more Kontakt : hat
+  Lead only one to zero or one Opportunity : "wird zu"
+  Opportunity only one to zero or one Buchung : "wird bei Zusage zu"
+  Buchung only one to zero or more Ticket : hat
+  Account {
+    string Name
+    string Branche
+    string Adresse
+  }
+  Kontakt {
+    string Name
+    string Rolle
+    string EMail
+    bool Einwilligung
+  }
+  Lead {
+    string Kanal
+    date Eventdatum
+    int Gästezahl
+    string Ort
+  }
+  Opportunity {
+    decimal Angebot
+    string Status
+    date Nachfassdatum
+    string Absagegrund
+  }
+  Buchung {
+    date Datum
+    string Leistung
+    string Standort
+  }
+  Ticket {
+    string Art
+    string Status
+    date Datum
+  }

@@ -1,0 +1,10 @@
+flowchart TD
+  A[Tag 1: Feedback-Mail<br/>mit NPS-Frage] ==> B{NPS}
+  B ==>|9 bis 10| C[Bitte um Empfehlung]
+  B ==>|7 bis 8| D[Frage, was gefehlt hat]
+  B ==>|0 bis 6| E[Ticket und Rückruf innerhalb<br/>von zwei Werktagen]
+  C ==> F{Tag 90: keine neue Buchung<br/>und kein offenes Ticket?}
+  D ==> F
+  E ==> F
+  F ==>|Ja| G([Angebot zur Wiederbuchung])
+  F ==>|Nein| H([kein Angebot])
