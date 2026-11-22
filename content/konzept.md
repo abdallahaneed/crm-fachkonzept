@@ -24,6 +24,8 @@ Ziele:
 5. Buchung: der bestätigte Auftrag mit Datum, Leistung und Standort.
 6. Ticket: Feedback oder Beschwerde nach dem Event.
 
+Ein Lead gehört zu einem Kontakt, eine Opportunity zu einem Account.
+
 ### Prozess
 
 1. Die Anfrage wird zum Lead: per Formular automatisch, sonst über eine kurze Eingabemaske.

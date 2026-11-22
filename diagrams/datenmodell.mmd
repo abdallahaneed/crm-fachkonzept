@@ -1,5 +1,7 @@
 erDiagram
   Account ||--|{ Kontakt : hat
+  Kontakt ||--o{ Lead : stellt
+  Account ||--o{ Opportunity : hat
   Lead ||--o| Opportunity : "wird zu"
   Opportunity ||--o| Buchung : "wird bei Zusage zu"
   Buchung ||--o{ Ticket : hat
