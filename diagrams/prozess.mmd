@@ -3,7 +3,7 @@ flowchart TD
   C --> D{Passen Datum, Ort<br/>und Gästezahl?}
   D -->|Ja| E[Opportunity:<br/>Angebot am selben Tag]
   D -->|Nein| J([Absage, Grund erfasst])
-  E --> G{Antwort nach<br/>drei Tagen?}
+  E --> G{Antwort innerhalb<br/>von drei Tagen?}
   G -->|Nein| H[Nachfass-Aufgabe]
   H --> G
   G -->|Ja| K{Zusage?}

@@ -17,10 +17,15 @@ cat > "$TMP/puppeteer.json" <<EOF
 {"executablePath": "$CHROME", "headless": "new"}
 EOF
 
-# Neutrales Theme, HTML-Labels (brauchen Chrome für den PDF-Export), breiter Umbruch,
+# Markenfarben von aneed.work (Moos, Tinte), HTML-Labels (brauchen Chrome für den PDF-Export), breiter Umbruch,
 # 24px Schrift, damit die Labels im PDF gedruckt lesbar bleiben
 cat > "$TMP/mermaid.json" <<'EOF'
-{"theme": "neutral", "htmlLabels": true, "flowchart": {"htmlLabels": true, "wrappingWidth": 400}, "themeVariables": {"fontSize": "24px"}, "fontFamily": "Helvetica, Arial, sans-serif"}
+{"theme": "base", "htmlLabels": true, "flowchart": {"htmlLabels": true, "wrappingWidth": 400},
+ "themeVariables": {"fontSize": "24px", "fontFamily": "Helvetica, Arial, sans-serif",
+   "primaryColor": "#E9ECE9", "primaryBorderColor": "#4B624B", "primaryTextColor": "#1C241D",
+   "lineColor": "#4B624B", "textColor": "#1C241D", "edgeLabelBackground": "#FFFFFF",
+   "clusterBkg": "#F5F5F1", "clusterBorder": "#D9DDD4",
+   "attributeBackgroundColorOdd": "#FFFFFF", "attributeBackgroundColorEven": "#F5F5F1"}}
 EOF
 
 for f in *.mmd; do

@@ -63,9 +63,10 @@ h2 {
   font-size: 10.5pt;
   font-weight: 600;
   color: var(--moss);
-  margin: 3.5mm 0 1mm;
+  margin: 0 0 1mm;
 }
-section > h2:first-child, .spalten > div > section:first-child > h2 { margin-top: 0; }
+/* Gleicher Abstand vor jeder Überschrift, die unter einem anderen Abschnitt steht */
+.spalten > div > section + section { margin-top: 4mm; }
 
 p + p { margin-top: 1.2mm; }
 
