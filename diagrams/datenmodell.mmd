@@ -1,8 +1,8 @@
 erDiagram
-  Account only one to one or more Kontakt : hat
-  Lead only one to zero or one Opportunity : "wird zu"
-  Opportunity only one to zero or one Buchung : "wird bei Zusage zu"
-  Buchung only one to zero or more Ticket : hat
+  Account ||--|{ Kontakt : hat
+  Lead ||--o| Opportunity : "wird zu"
+  Opportunity ||--o| Buchung : "wird bei Zusage zu"
+  Buchung ||--o{ Ticket : hat
   Account {
     string Name
     string Branche

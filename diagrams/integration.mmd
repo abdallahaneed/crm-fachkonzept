@@ -5,13 +5,13 @@ flowchart LR
     T[Telefon oder WhatsApp]
     I[Instagram]
   end
-  F ==>|REST API| CRM[(BSI CRM)]
-  M ==>|Weiterleitung| CRM
-  T ==> EM[Eingabemaske]
-  I ==> EM
-  EM ==> CRM
-  CRM ==>|Buchungen| K[Teamkalender]
-  CRM ==>|Buchungen| R[Rechnungsprogramm]
+  F -->|REST API| CRM[(BSI CRM)]
+  M -->|Weiterleitung| CRM
+  T --> EM[Eingabemaske]
+  I --> EM
+  EM --> CRM
+  CRM -->|Buchungen| K[Teamkalender]
+  CRM -->|Buchungen| R[Rechnungsprogramm]
   subgraph Netz
     S[Jeder Standort sieht<br/>seine Daten]
     Z[Die Zentrale sieht die<br/>KPIs aller Standorte]
