@@ -1,0 +1,101 @@
+@font-face { font-family: "Schibsted Grotesk"; font-weight: 400; src: url(fonts/SchibstedGrotesk-400.woff2) format("woff2"); }
+@font-face { font-family: "Schibsted Grotesk"; font-weight: 500; src: url(fonts/SchibstedGrotesk-500.woff2) format("woff2"); }
+@font-face { font-family: "Schibsted Grotesk"; font-weight: 600; src: url(fonts/SchibstedGrotesk-600.woff2) format("woff2"); }
+@font-face { font-family: "Big Shoulders Display"; font-weight: 800; src: url(fonts/BigShouldersDisplay-800.woff2) format("woff2"); }
+
+/* Farben aus aneed.work */
+:root {
+  --moss: #4B624B;
+  --signal: #E74536;
+  --ink: #1C241D;
+  --muted: #5A665C;
+  --line: #D9DDD4;
+  --chalk: #F5F5F1;
+}
+
+@page { size: A4; margin: 0; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  font-family: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.32;
+  color: var(--ink);
+  background: #fff;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  padding: 12mm 18mm 11mm;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+  overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+
+.kopf, .fuss {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8pt;
+  color: var(--muted);
+}
+.kopf { padding-bottom: 2mm; border-bottom: 0.5pt solid var(--line); }
+.fuss { padding-top: 2mm; border-top: 0.5pt solid var(--line); }
+
+main { flex: 1; padding-top: 5mm; min-height: 0; }
+
+h1 {
+  font-family: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  font-weight: 800;
+  font-size: 20pt;
+  line-height: 1.05;
+  letter-spacing: 0.2pt;
+}
+.unterzeile { color: var(--muted); margin-top: 1.5mm; }
+
+
+h2 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: var(--moss);
+  margin: 3.5mm 0 1mm;
+}
+section > h2:first-child, .spalten > div > section:first-child > h2 { margin-top: 0; }
+
+p + p { margin-top: 1.2mm; }
+
+ol { padding-left: 4.5mm; }
+li { margin-top: 0.3mm; padding-left: 0.5mm; }
+li::marker { color: var(--muted); font-size: 9pt; font-variant-numeric: normal; }
+
+.spalten { display: grid; gap: 7mm; }
+.trenner { border-top: 0.5pt solid var(--line); margin-top: 3.5mm; padding-top: 3mm; }
+
+figure img { width: 100%; display: block; }
+figcaption { font-size: 8pt; color: var(--muted); margin-top: 1.5mm; }
+
+table { width: 100%; border-collapse: collapse; }
+th {
+  text-align: left;
+  font-size: 8pt;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 0.8pt solid var(--ink);
+  padding: 0 0 1mm;
+}
+td { border-bottom: 0.5pt solid var(--line); padding: 1.1mm 0; vertical-align: top; }
+td + td, th + th { padding-left: 3mm; white-space: nowrap; }
+
+.box {
+  background: var(--chalk);
+  border-left: 2pt solid var(--moss);
+  padding: 3.5mm 4mm;
+}
+.box .fazit { font-weight: 600; margin-top: 2mm; }
+
+.prio { font-weight: 600; color: var(--moss); }

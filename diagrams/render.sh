@@ -17,9 +17,10 @@ cat > "$TMP/puppeteer.json" <<EOF
 {"executablePath": "$CHROME", "headless": "new"}
 EOF
 
-# Neutrales Theme, HTML-Labels (brauchen Chrome für den PDF-Export), breiter Umbruch
+# Neutrales Theme, HTML-Labels (brauchen Chrome für den PDF-Export), breiter Umbruch,
+# 24px Schrift, damit die Labels im PDF gedruckt lesbar bleiben
 cat > "$TMP/mermaid.json" <<'EOF'
-{"theme": "neutral", "htmlLabels": true, "flowchart": {"htmlLabels": true, "wrappingWidth": 400}, "fontFamily": "Helvetica, Arial, sans-serif"}
+{"theme": "neutral", "htmlLabels": true, "flowchart": {"htmlLabels": true, "wrappingWidth": 400}, "themeVariables": {"fontSize": "24px"}, "fontFamily": "Helvetica, Arial, sans-serif"}
 EOF
 
 for f in *.mmd; do

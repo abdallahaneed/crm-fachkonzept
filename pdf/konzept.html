@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>CRM-Fachkonzept: Coffee-Bike-Caterer im Franchise-Netz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <div class="kopf"><span>Abdallah Aneed · aneed.work · November 2026</span><span>Konzept</span></div>
+  <main>
+    <h1>CRM-Fachkonzept: Coffee-Bike-Caterer im Franchise-Netz</h1>
+    <p class="unterzeile">Fallstudie zur Übung. Standort Bonn, Teil eines Franchise-Netzes, vor allem B2B-Events.</p>
+
+    <div class="spalten trenner" style="grid-template-columns: 1fr 68mm;">
+      <div>
+        <section>
+          <h2>Ausgangslage und Ziel</h2>
+          <p>Anfragen kommen über Website-Formular, E-Mail, Telefon oder WhatsApp und Instagram, etwa 20 pro Monat (Annahme, Spanne 10 bis 30). Etwa 30 Prozent der Kunden buchen erneut (Annahme, Spanne 20 bis 40).</p>
+          <p>Jede Anfrage wird am selben Tag beantwortet. An einer Stelle landen aber nur Formularanfragen. E-Mail, Telefon, WhatsApp und Instagram werden nicht zentral erfasst. Nachfassen und Wiederbuchung hängen deshalb vom Gedächtnis ab. Das ist das eigentliche Problem. Auf Netzwerkebene fehlen zudem gemeinsame Daten.</p>
+          <p>Ziele:</p>
+          <ol>
+            <li>Jede Anfrage wird erfasst, egal über welchen Kanal.</li>
+            <li>Mehr Kunden buchen erneut.</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Datenmodell</h2>
+          <ol>
+            <li>Account: das buchende Unternehmen.</li>
+            <li>Kontakt: die Person beim Account, mit Einwilligung.</li>
+            <li>Lead: die neue Anfrage mit Kanal, Eventdatum und Gästezahl.</li>
+            <li>Opportunity: die geprüfte Anfrage mit Angebot und Status.</li>
+            <li>Buchung: der bestätigte Auftrag mit Datum, Leistung und Standort.</li>
+            <li>Ticket: Feedback oder Beschwerde nach dem Event.</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Customer Journey nach dem Event</h2>
+          <ol>
+            <li>Tag 1: Feedback-Mail mit NPS-Frage.</li>
+            <li>NPS 9 bis 10: Bitte um Empfehlung. NPS 7 bis 8: Frage, was gefehlt hat.</li>
+            <li>NPS 0 bis 6: Ticket und Rückruf innerhalb von zwei Werktagen.</li>
+            <li>Tag 90: Angebot zur Wiederbuchung, wenn keine neue Buchung und kein offenes Ticket vorliegt.</li>
+          </ol>
+        </section>
+      </div>
+      <section>
+        <h2>Prozess</h2>
+        <figure>
+          <img src="../diagrams/prozess.svg" alt="Prozess von der Anfrage zur Buchung">
+        </figure>
+      </section>
+    </div>
+
+    <div class="spalten trenner" style="grid-template-columns: 1fr 1fr;">
+      <section>
+        <h2>BSI-Module</h2>
+        <ol>
+          <li>BSI CRM: Accounts, Kontakte, Leads, Opportunities, Buchungen.</li>
+          <li>BSI CX: Kanäle, Tickets, Journey nach dem Event.</li>
+          <li>BSI CDP: Kundendaten aus allen Kanälen, Auswahl für das 90-Tage-Angebot.</li>
+          <li>BSI Insight: KPIs pro Standort und für das Netz.</li>
+          <li>BSI AI: nicht in Phase 1, später zum Vorsortieren von Anfragen.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>KPIs (Annahme)</h2>
+        <table>
+          <tr><th>KPI</th><th>Heute</th><th>Ziel</th></tr>
+          <tr><td>Anfragen zentral erfasst</td><td>60 %</td><td>100 %</td></tr>
+          <tr><td>Antwort am selben Tag</td><td>100 %</td><td>halten</td></tr>
+          <tr><td>Abschlussquote Lead zu Buchung</td><td>40 %</td><td>50 %</td></tr>
+          <tr><td>Wiederbuchungsquote</td><td>30 %</td><td>40 %</td></tr>
+          <tr><td>Rücklauf Feedback-Mail</td><td>0 %</td><td>25 %</td></tr>
+          <tr><td>NPS</td><td>nicht gemessen</td><td>50</td></tr>
+        </table>
+      </section>
+    </div>
+  </main>
+  <div class="fuss"><span>Übungskonzept. Kein produktives BSI-System. Zahlen sind Annahmen.</span><span>Seite 1 von 2</span></div>
+</div>
+
+<div class="page">
+  <div class="kopf"><span>Abdallah Aneed · aneed.work · November 2026</span><span>Anhang</span></div>
+  <main>
+
+    <div class="spalten" style="grid-template-columns: 1fr 1fr;">
+      <section>
+        <h2>User Stories</h2>
+        <ol>
+          <li><span class="prio">Must:</span> Als Inhaber will ich alle Anfragen in einer Liste sehen.</li>
+          <li><span class="prio">Must:</span> Als Mitarbeiter will ich eine Telefon- oder WhatsApp-Anfrage in einer Minute erfassen.</li>
+          <li><span class="prio">Must:</span> Als Inhaber will ich nach drei Tagen ohne Antwort eine Nachfass-Aufgabe.</li>
+          <li><span class="prio">Must:</span> Als Inhaber will ich nach 90 Tagen ein automatisches Wiederbuchungsangebot.</li>
+          <li><span class="prio">Should:</span> Als Kunde will ich nach dem Event eine kurze Feedback-Mail.</li>
+          <li><span class="prio">Should:</span> Als Inhaber will ich bei NPS 0 bis 6 sofort ein Ticket.</li>
+          <li><span class="prio">Could:</span> Als Franchise-Zentrale will ich die KPIs aller Standorte vergleichen.</li>
+          <li><span class="prio">Won't (vorerst):</span> Als Kunde will ich online selbst buchen.</li>
+        </ol>
+      </section>
+      <section class="box">
+        <h2>Systemauswahl</h2>
+        <ol>
+          <li>HubSpot: leichtes CRM, schnell eingerichtet. Reicht für einen Einzelbetrieb.</li>
+          <li>Salesforce, Microsoft Dynamics 365: große Plattformen, Optionen für das Netz. US-Anbieter, schwächer bei der Datensouveränität. Dynamics passt vor allem in Microsoft-Umgebungen.</li>
+          <li>BSI: europäischer Anbieter mit starker Datensouveränität, stark in regulierten Branchen, Low-Code-Konfiguration, eine Plattform mit eigener Sicht pro Standort.</li>
+        </ol>
+        <p style="margin-top: 2mm;">Für dieses Netz spricht am meisten für BSI. Als Enterprise-Software lohnen sich die Lizenzkosten aber erst über viele Standorte.</p>
+        <p class="fazit">Für einen Einzelbetrieb wäre BSI zu groß. Für ein Franchise-Netz mit vielen Standorten passt es.</p>
+      </section>
+    </div>
+
+    <section class="trenner">
+      <h2>Integration</h2>
+      <p>Das Formular schickt Anfragen per REST ans CRM, dort entsteht ein Lead. E-Mails werden ins CRM weitergeleitet. Telefon, WhatsApp und Instagram laufen über die Eingabemaske. Buchungen gehen in Teamkalender und Rechnungsprogramm. Jeder Standort sieht seine Daten, die Zentrale die KPIs aller Standorte.</p>
+      <figure style="margin-top: 2.5mm;">
+        <img src="../diagrams/integration.svg" alt="Integration der Kanäle in BSI CRM">
+      </figure>
+    </section>
+
+    <div class="spalten trenner" style="grid-template-columns: 1fr 1fr;">
+      <section>
+        <h2>Rollout</h2>
+        <ol>
+          <li>Phase 1, Monat 1 bis 2: Pilot Bonn mit CRM-Kern, Formular, Eingabemaske, Nachfassen.</li>
+          <li>Phase 2, Monat 3 bis 4: Journey nach dem Event, erste KPI-Berichte.</li>
+          <li>Phase 3, ab Monat 5: weitere Standorte, Sicht für die Zentrale.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Risiken</h2>
+        <ol>
+          <li>Das Team erfasst Telefon und WhatsApp nicht. Gegenmaßnahme: Eingabemaske mit fünf Pflichtfeldern.</li>
+          <li>Mails nach dem Event verletzen den Datenschutz. Gegenmaßnahme: Einwilligung im Formular, Abmeldelink in jeder Mail, vorher rechtlich prüfen lassen.</li>
+          <li>Standorte pflegen Daten unterschiedlich. Gegenmaßnahme: einheitliche Pflichtfelder und Vorlagen der Zentrale.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+  <div class="fuss"><span>Übungskonzept. Kein produktives BSI-System. Zahlen sind Annahmen.</span><span>Seite 2 von 2</span></div>
+</div>
+
+<script>
+  // Für build.sh: meldet, ob der Inhalt einer Seite über den Rand läuft
+  document.fonts.ready.then(() => {
+    const voll = [...document.querySelectorAll("main")]
+      .map((m, i) => (m.scrollHeight > m.clientHeight + 1 ? "Seite " + (i + 1) + " läuft über (" + Math.round((m.scrollHeight - m.clientHeight) / 3.78) + " mm)" : ""))
+      .filter(Boolean);
+    document.body.dataset.passt = voll.length ? voll.join(", ") : "ja";
+  });
+</script>
+</body>
+</html>
